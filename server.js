@@ -236,7 +236,6 @@ app.get('/pr', function (req, res) {
 		href: "http://corvallisswing.wikispaces.com/Promos+-+Announcements"
 	},{
 		name: "Training: Seth Godin Videos",
-		img: "/img/godin.png",
 		href: "https://www.youtube.com/watch?v=6kGFyrVgUPk"
 	}]);
 })
