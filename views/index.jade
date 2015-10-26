@@ -1,0 +1,22 @@
+html
+	head
+		link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous")
+
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+
+		link(rel="stylesheet" type="text/css" href="main.css")
+
+body
+	.container-fluid
+		h2 #{title}
+
+		for section, index in sections
+			.col-xs-6.col-sm-2(class=(index % 3 === 0) ? 'col-sm-offset-3' : '')
+				.choice
+					a(href="#{section.href}")
+						.pictograph
+							if section.img
+								img(src="#{section.img}")
+						p #{section.name}
+			
