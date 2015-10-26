@@ -1,5 +1,6 @@
 var express = require('express');
 var path = require('path');
+var url = require('url');
 var app = express();
 
 app.set('views', path.join(__dirname, 'views'));
@@ -8,6 +9,22 @@ app.set('view engine', 'jade');
 app.use(express.static('public'));
 
 var render = function (res, title, sections) {
+	var videoUrl;
+
+	for (index in sections) {
+		var section = sections[index];
+
+		if (section.type === "video") {
+			videoUrl = url.parse(section.href, true);
+
+			// Rely on YouTube's thumbnail image format
+			if (videoUrl.host === "www.youtube.com") {
+				sections[index].img = "http://img.youtube.com/vi/" + 
+					videoUrl.query.v + "/" + (section.img || "0.jpg");
+			}
+		}
+	}
+
 	res.render('index', { 
 		sections: sections,
 		title: title 
@@ -75,22 +92,22 @@ app.get('/teachers/171', function (req, res) {
 	},{
 		name: "Week 1 v1",
 		type: "video",
-		img: "http://img.youtube.com/vi/-vJdrRMUL-E/0.jpg",
+		img: "0.jpg",
 		href: "https://www.youtube.com/watch?v=-vJdrRMUL-E"
 	},{
 		name: "Week 1 v3",
 		type: "video",
-		img: "http://img.youtube.com/vi/AqGhscQk3C8/0.jpg",
+		img: "0.jpg",
 		href: "https://www.youtube.com/watch?v=AqGhscQk3C8"
 	},{
 		name: "Week 1 v4",
 		type: "video",
-		img: "http://img.youtube.com/vi/upvH6SE_2SM/0.jpg",
+		img: "0.jpg",
 		href: "https://www.youtube.com/watch?v=upvH6SE_2SM"
 	},{
 		name: "Week 1 v5",
 		type: "video",
-		img: "http://img.youtube.com/vi/faZ_LHYljSg/0.jpg",
+		img: "0.jpg",
 		href: "https://www.youtube.com/watch?v=faZ_LHYljSg"
 	}]);
 });
@@ -99,17 +116,17 @@ app.get('/teachers/balboa', function (req, res) {
 	render(res, "Balboa", [{
 		name: "Balboa fundamentals",
 		type: "video",
-		img: "http://img.youtube.com/vi/u_DVCxnST0Y/1.jpg",
+		img: "1.jpg",
 		href: "https://www.youtube.com/watch?v=u_DVCxnST0Y"
 	},{
 		name: "Bal-swing fundamentals",
 		type: "video",
-		img: "http://img.youtube.com/vi/heDJHociUa4/1.jpg",
+		img: "1.jpg",
 		href: "https://www.youtube.com/watch?v=heDJHociUa4"
 	},{
 		name: "Bal-swing part 2",
 		type: "video",
-		img: "http://img.youtube.com/vi/xgZGTOiyTRk/1.jpg",
+		img: "1.jpg",
 		href: "https://www.youtube.com/watch?v=xgZGTOiyTRk"
 	}]);
 });
@@ -163,7 +180,7 @@ app.get('/council', function (req, res) {
 app.get('/council/training', function (req, res) {
 	render(res, "Council: Books and things", [{
 		name: "Ken Burns Jazz [Video]",
-		img: "http://img.youtube.com/vi/PucsQYGc51w/0.jpg",
+		img: "0.jpg",
 		type: "video",
 		href: "https://www.youtube.com/watch?v=PucsQYGc51w&list=PLy2LcqUi5nFj0X_7SGlaILgmW_oK_QfZo"
 	},{
