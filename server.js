@@ -9,19 +9,21 @@ app.set('view engine', 'jade');
 app.use(express.static('public'));
 
 var render = function (res, title, sections) {
-	var videoUrl;
-
+	
 	for (index in sections) {
 		var section = sections[index];
+		
+		var sectionUrl = {};
+		if (section.href) {
+			sectionUrl = url.parse(section.href, true);
+		}
 
-		if (section.type === "video") {
-			videoUrl = url.parse(section.href, true);
+		if (sectionUrl.host && sectionUrl.host === "www.youtube.com") {
+			sections[index].type = "video";
 
 			// Rely on YouTube's thumbnail image format
-			if (videoUrl.host === "www.youtube.com") {
-				sections[index].img = "http://img.youtube.com/vi/" + 
-					videoUrl.query.v + "/" + (section.img || "0.jpg");
-			}
+			sections[index].img = "http://img.youtube.com/vi/" + 
+					sectionUrl.query.v + "/" + (section.img || "0.jpg");
 		}
 	}
 
@@ -91,41 +93,33 @@ app.get('/teachers/171', function (req, res) {
 		href: "https://docs.google.com/document/d/1EmT_Fa0Z25ROEvyTIv0URLpmlORiqmS_XF3byt3NLA4/edit?usp=sharing"
 	},{
 		name: "Week 1 v1",
-		type: "video",
-		img: "0.jpg",
 		href: "https://www.youtube.com/watch?v=-vJdrRMUL-E"
 	},{
 		name: "Week 1 v3",
-		type: "video",
-		img: "0.jpg",
 		href: "https://www.youtube.com/watch?v=AqGhscQk3C8"
 	},{
 		name: "Week 1 v4",
-		type: "video",
-		img: "0.jpg",
 		href: "https://www.youtube.com/watch?v=upvH6SE_2SM"
 	},{
 		name: "Week 1 v5",
-		type: "video",
-		img: "0.jpg",
 		href: "https://www.youtube.com/watch?v=faZ_LHYljSg"
+	},{
+		name: "Week 2 v1",
+		href: "https://www.youtube.com/watch?v=Fvw2Gr2ZIvk"
 	}]);
 });
 
 app.get('/teachers/balboa', function (req, res) {
 	render(res, "Balboa", [{
 		name: "Balboa fundamentals",
-		type: "video",
 		img: "1.jpg",
 		href: "https://www.youtube.com/watch?v=u_DVCxnST0Y"
 	},{
 		name: "Bal-swing fundamentals",
-		type: "video",
 		img: "1.jpg",
 		href: "https://www.youtube.com/watch?v=heDJHociUa4"
 	},{
 		name: "Bal-swing part 2",
-		type: "video",
 		img: "1.jpg",
 		href: "https://www.youtube.com/watch?v=xgZGTOiyTRk"
 	}]);
