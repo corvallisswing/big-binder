@@ -6,7 +6,7 @@ html
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
 		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
 
-		link(rel="stylesheet" type="text/css" href="main.css")
+		link(rel="stylesheet" type="text/css" href="/main.css")
 
 body
 	.container-fluid
@@ -18,6 +18,11 @@ body
 					a(href="#{section.href}")
 						.pictograph
 							if section.img
-								img(src="#{section.img}")
+								if section.type === "video" && section.img
+									.video-wrapper
+										img(src="#{section.img}")
+								else
+									.img-wrapper
+										img(src="#{section.img}")
 						p #{section.name}
 			
