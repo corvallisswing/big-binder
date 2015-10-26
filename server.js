@@ -92,7 +92,7 @@ app.get('/teachers/171', function (req, res) {
 		name: "Teacher Notes",
 		href: "https://docs.google.com/document/d/1EmT_Fa0Z25ROEvyTIv0URLpmlORiqmS_XF3byt3NLA4/edit?usp=sharing"
 	},{
-		name: "Week 1 v1",
+		name: "Week 1 v2",
 		href: "https://www.youtube.com/watch?v=-vJdrRMUL-E"
 	},{
 		name: "Week 1 v3",
@@ -104,8 +104,104 @@ app.get('/teachers/171', function (req, res) {
 		name: "Week 1 v5",
 		href: "https://www.youtube.com/watch?v=faZ_LHYljSg"
 	},{
-		name: "Week 2 v1",
+		name: "Week 2 v2",
 		href: "https://www.youtube.com/watch?v=Fvw2Gr2ZIvk"
+	},{
+		name: "Week 2 v3",
+		href: "https://www.youtube.com/watch?v=miU2cf9QeTc"
+	},{
+		name: "Week 2 v4",
+		href: "https://www.youtube.com/watch?v=TbkfUTkY35k"
+	},{
+		name: "Week 2 v5",
+		href: "https://www.youtube.com/watch?v=P3xIrn9zB34"
+	},{
+		name: "Week 3 v2",
+		href: "https://www.youtube.com/watch?v=WHCrN_EL0rk"
+	},{
+		name: "Week 3 v3",
+		href: "https://www.youtube.com/watch?v=MN-UdN5sINM"
+	},{
+		name: "Week 3 v4",
+		href: "https://www.youtube.com/watch?v=FJqH31sz28g"
+	},{
+		name: "Week 3 v5",
+		href: "https://www.youtube.com/watch?v=UvH4Pcxg0cU"
+	},{
+		name: "Week 4 v2",
+		href: "https://www.youtube.com/watch?v=9-W1Y8eprCs"
+	},{
+		name: "Week 4 v3",
+		href: "https://www.youtube.com/watch?v=L3Dj3iVuDYA"
+	},{
+		name: "Week 4 v4",
+		href: "https://www.youtube.com/watch?v=UE7YUAeF_mU"
+	},{
+		name: "Week 4 v5",
+		href: "https://www.youtube.com/watch?v=VoWnbiJ00l4"
+	},{
+		name: "Week 5 v3",
+		href: "https://www.youtube.com/watch?v=xxdB0Ma_XTI"
+	},{
+		name: "Week 5 v4",
+		href: "https://www.youtube.com/watch?v=5fIDZxYMCtw"
+	},{
+		name: "Week 5 v5",
+		href: "https://www.youtube.com/watch?v=0jfybeervs0"
+	},{
+		name: "Week 6 v3",
+		href: "https://www.youtube.com/watch?v=uaJQS9sdmGI"
+	},{
+		name: "Week 6 v4",
+		href: "https://www.youtube.com/watch?v=tw9fsvdZjcI"
+	},{
+		name: "Week 6 v5",
+		href: "https://www.youtube.com/watch?v=BC10vrNbAtY"
+	},{
+		name: "Week 7 v3",
+		href: "https://www.youtube.com/watch?v=JbB5m09btOk"
+	},{
+		name: "Week 7 v4",
+		href: "https://www.youtube.com/watch?v=hmK8VTZqzMI"
+	},{
+		name: "Week 7 v5",
+		href: "https://www.youtube.com/watch?v=hjmGGDteTTo"
+	},{
+		name: "Week 7 v5 Isolations",
+		href: "https://www.youtube.com/watch?v=seWbQkbsp4Q"
+	},{
+		name: "Week 8 v2",
+		href: "https://www.youtube.com/watch?v=Ybx53-BzEtg"
+	},{
+		name: "Week 8 v3",
+		href: "https://www.youtube.com/watch?v=kBXEtFZwVSY"
+	},{
+		name: "Week 8 v4",
+		href: "https://www.youtube.com/watch?v=t6DDXL3fdok"
+	},{
+		name: "Week 8 v5 Redirection",
+		href: "https://www.youtube.com/watch?v=v4XVrrTkVsY"
+	},{
+		name: "Week 8 v5 Rotational momentum",
+		href: "https://www.youtube.com/watch?v=-sY_0qljwI4"
+	},{
+		name: "Week 9 v3",
+		href: "https://www.youtube.com/watch?v=ts4m3iwPAiw"
+	},{
+		name: "Week 9 v4",
+		href: "https://www.youtube.com/watch?v=CkGvmmgugQM"
+	},{
+		name: "Week 9 v5",
+		href: "https://www.youtube.com/watch?v=s8kyEw2L3yA"
+	},{
+		name: "Week 10 v3",
+		href: "https://www.youtube.com/watch?v=hG0GwkheZOE"
+	},{
+		name: "Week 10 v5 Small spaces",
+		href: "https://www.youtube.com/watch?v=hUgpHRPKaiY"
+	},{
+		name: "Week 10 v5 Musicality",
+		href: "https://www.youtube.com/watch?v=GJ7JYWzRTjU"
 	}]);
 });
 
