@@ -126,14 +126,18 @@ app.get('/teachers', function (req, res) {
 		img: "/img/mikey.jpg",
 		href: "https://docs.google.com/document/d/1WD-VIfcUYFzyMnDguA2rL9aqb0tWHQ946cfVdauW0iU/edit?usp=sharing"
 	},{
-		type: "break"
+		name: "Evaluation form",
+		href: "https://docs.google.com/document/d/1gB_7iTMHPZp9Z27_SYw1iq3JecIVJnuKjAiEjEm6sIE/edit?usp=sharing"
+	},{
+		name: "Lessons folder",
+		href: "https://drive.google.com/drive/folders/0B_AgZreuqRLcfmpJQjF3R3UxSG11STVqYzdPQTV2MmtVOGoySHJWS2lodWp1eWp3S2pmcUU"
 	},{
 		name: "Swing 171",
 		src: "http://rabscuttle.com",
 		img: "/img/171.jpg",
 		href: "/teachers/171"
 	},{
-		name: "Swing 178 Outline",
+		name: "Swing 178 outline",
 		src: "http://rabscuttle.com",
 		img: "/img/178.jpg",
 		href: "https://docs.google.com/document/d/1NhgGzBZFWNN51x-tJwE7Vgi2xoUxqO3iGmJRuqIZ3po/edit?usp=sharing"
@@ -287,6 +291,9 @@ app.get('/pr', function (req, res) {
 	render(res, "PR", [{
 		name: "Outline",
 		href: "https://docs.google.com/document/d/1t5g7XBsZQuSFugkQ5HYHKvWfEXounlI8BkT3-_B_8co/edit?usp=sharing"
+	},{
+		name: "Poster spots",
+		href: "https://docs.google.com/spreadsheets/d/1c5kfFreTG3Fabfm_HAW30XV0bB74K8f_Vi5_2pSSt-k/"
 	},{
 		name: "How to: Facebook event",
 		href: "http://corvallisswing.wikispaces.com/Promos+-+Facebook"
