@@ -96,20 +96,25 @@ app.get('/', function (req, res) {
 app.get('/djs', function (req, res) {
 	render(res, "DJs", [{
 		name: "Standards List",
+		img: "/img/ellington.jpg",
 		href: "https://docs.google.com/spreadsheets/d/1fDivUcFO0EP-fFQoX8odSoIm_IkKtD01kz1TMTyEUu0/edit?usp=sharing"
 	},{
 		type: "break"
 	},{
 		name: "Levels 1 and 2",
+		img: "/img/ella.jpg",
 		href: "http://corvallisswing.wikispaces.com/DJ+-+New+recruit"
 	},{
 		name: "Levels 3 and 4",
+		img: "/img/cab.jpg",
 		href: "http://corvallisswing.wikispaces.com/DJ+-+Novice"
 	},{
 		name: "How to: Find music",
+		img: "/img/webster.jpg",
 		href: "http://corvallisswing.wikispaces.com/Music+-+Finding"
 	},{
 		name: "Resource: Ken Burns Jazz",
+		img: "/img/fats.jpg",
 		href: "http://www.imdb.com/title/tt0221300/"
 	}]);
 });
