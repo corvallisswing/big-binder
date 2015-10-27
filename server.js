@@ -95,7 +95,7 @@ app.get('/', function (req, res) {
 
 app.get('/djs', function (req, res) {
 	render(res, "DJs", [{
-		name: "Standards List",
+		name: "Standards list",
 		img: "/img/ellington.jpg",
 		href: "https://docs.google.com/spreadsheets/d/1fDivUcFO0EP-fFQoX8odSoIm_IkKtD01kz1TMTyEUu0/edit?usp=sharing"
 	},{
@@ -130,6 +130,7 @@ app.get('/teachers', function (req, res) {
 		href: "https://docs.google.com/document/d/1gB_7iTMHPZp9Z27_SYw1iq3JecIVJnuKjAiEjEm6sIE/edit?usp=sharing"
 	},{
 		name: "Lessons folder",
+		img: "/img/vault.jpg",
 		href: "https://drive.google.com/drive/folders/0B_AgZreuqRLcfmpJQjF3R3UxSG11STVqYzdPQTV2MmtVOGoySHJWS2lodWp1eWp3S2pmcUU"
 	},{
 		name: "Swing 171",
@@ -151,7 +152,7 @@ app.get('/teachers', function (req, res) {
 
 app.get('/teachers/171', function (req, res) {
 	render(res, "Swing 171", [{
-		name: "Teacher Notes",
+		name: "Teacher notes",
 		href: "https://docs.google.com/document/d/1EmT_Fa0Z25ROEvyTIv0URLpmlORiqmS_XF3byt3NLA4/edit?usp=sharing"
 	},{
 		name: "Week 1 v2",
@@ -301,10 +302,10 @@ app.get('/pr', function (req, res) {
 		name: "How to: Newsletter",
 		href: "http://corvallisswing.wikispaces.com/Promos+-+Newsletter"
 	},{
-		name: "How to: OSU Announcements",
+		name: "How to: Ballroom announcements",
 		href: "http://corvallisswing.wikispaces.com/Promos+-+Announcements"
 	},{
-		name: "Training: Seth Godin Videos",
+		name: "Training: Seth Godin videos",
 		href: "https://www.youtube.com/watch?v=6kGFyrVgUPk"
 	}]);
 })
@@ -340,7 +341,7 @@ app.get('/council', function (req, res) {
 
 app.get('/council/training', function (req, res) {
 	render(res, "Council: Books and things", [{
-		name: "Ken Burns Jazz [Video]",
+		name: "Ken Burns Jazz",
 		img: "0.jpg",
 		type: "video",
 		href: "https://www.youtube.com/watch?v=PucsQYGc51w&list=PLy2LcqUi5nFj0X_7SGlaILgmW_oK_QfZo"
