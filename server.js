@@ -88,6 +88,7 @@ app.get('/', function (req, res) {
 		href: "/council"
 	}, {
 		name: "Vault",
+		img: "/img/vault.jpg",
 		href: "https://drive.google.com/drive/folders/0B_9J_VBOwnbYdEFmRDhhSlZDWnM"
 	}]);
 });
@@ -96,6 +97,20 @@ app.get('/djs', function (req, res) {
 	render(res, "DJs", [{
 		name: "Standards List",
 		href: "https://docs.google.com/spreadsheets/d/1fDivUcFO0EP-fFQoX8odSoIm_IkKtD01kz1TMTyEUu0/edit?usp=sharing"
+	},{
+		type: "break"
+	},{
+		name: "Levels 1 and 2",
+		href: "http://corvallisswing.wikispaces.com/DJ+-+New+recruit"
+	},{
+		name: "Levels 3 and 4",
+		href: "http://corvallisswing.wikispaces.com/DJ+-+Novice"
+	},{
+		name: "How to: Find music",
+		href: "http://corvallisswing.wikispaces.com/Music+-+Finding"
+	},{
+		name: "Resource: Ken Burns Jazz",
+		href: "http://www.imdb.com/title/tt0221300/"
 	}]);
 });
 
