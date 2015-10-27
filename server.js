@@ -122,15 +122,25 @@ app.get('/djs', function (req, res) {
 app.get('/teachers', function (req, res) {
 	render(res, "Teachers", [{
 		name: "Path outline",
+		src: "https://www.flickr.com/photos/eric00000007/",
+		img: "/img/mikey.jpg",
 		href: "https://docs.google.com/document/d/1WD-VIfcUYFzyMnDguA2rL9aqb0tWHQ946cfVdauW0iU/edit?usp=sharing"
 	},{
+		type: "break"
+	},{
 		name: "Swing 171",
+		src: "http://rabscuttle.com",
+		img: "/img/171.jpg",
 		href: "/teachers/171"
 	},{
 		name: "Swing 178 Outline",
+		src: "http://rabscuttle.com",
+		img: "/img/178.jpg",
 		href: "https://docs.google.com/document/d/1NhgGzBZFWNN51x-tJwE7Vgi2xoUxqO3iGmJRuqIZ3po/edit?usp=sharing"
 	},{
 		name: "Balboa",
+		src: "https://www.flickr.com/photos/mobilhomme/",
+		img: "/img/balboa.jpg",
 		href: "/teachers/balboa"
 	}])
 });
