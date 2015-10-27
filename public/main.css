@@ -41,8 +41,6 @@ h2 {
 	margin: auto;
 	margin-top: 1ex;
 	text-align: center;
-	vertical-align: center;
-	height: 100%;
 }
 
 .glyph {
@@ -51,4 +49,11 @@ h2 {
 	margin: auto;
 	padding-top: 40px;
 	width: 50px;
+}
+
+.google-drive-glyph {
+	display: inline-block;
+	fill: #ccc;
+	vertical-align: text-bottom;
+	width: 15px;
 }

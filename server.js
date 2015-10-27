@@ -18,12 +18,23 @@ var render = function (res, title, sections) {
 			sectionUrl = url.parse(section.href, true);
 		}
 
-		if (sectionUrl.host && sectionUrl.host === "www.youtube.com") {
-			sections[index].type = "video";
+		// Set section type based on the hostname
+		if (sectionUrl.host) {
 
-			// Rely on YouTube's thumbnail image format
-			sections[index].img = "http://img.youtube.com/vi/" + 
-					sectionUrl.query.v + "/" + (section.img || "0.jpg");
+			// YouTube videos
+			if (sectionUrl.host === "www.youtube.com") {
+				sections[index].type = "video";
+
+				// Rely on YouTube's thumbnail image format
+				sections[index].img = "http://img.youtube.com/vi/" + 
+						sectionUrl.query.v + "/" + (section.img || "0.jpg");
+			}
+
+			// Google Drive
+			if (sectionUrl.host === "docs.google.com"
+				|| sectionUrl.host === "drive.google.com") {
+				sections[index].type = "google-drive";
+			}
 		}
 	}
 

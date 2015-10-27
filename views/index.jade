@@ -27,5 +27,9 @@ body
 									else
 										.img-wrapper
 											img(src="#{section.img}")
-							p #{section.name}
+											
+							p #{section.name} 
+								if (section.type === "google-drive")
+									span.google-drive-glyph
+										include ../public/glyphs/google-drive.svg
 			
