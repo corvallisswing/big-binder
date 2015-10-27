@@ -13,16 +13,19 @@ body
 		h2 #{title}
 
 		for section, index in sections
-			.col-xs-6.col-sm-2(class=(index % 3 === 0) ? 'col-sm-offset-3' : '')
-				.choice
-					a(href="#{section.href}")
-						.pictograph
-							if section.img
-								if section.type === "video" && section.img
-									.video-wrapper
-										img(src="#{section.img}")
-								else
-									.img-wrapper
-										img(src="#{section.img}")
-						p #{section.name}
+			if (section.type && section.type === 'break')
+				.row
+			else
+				.col-xs-6.col-sm-2(class=(section.isFirstInRow ? 'col-sm-offset-3' : ''))
+					.choice
+						a(href="#{section.href}")
+							.pictograph
+								if section.img
+									if section.type === "video" && section.img
+										.video-wrapper
+											img(src="#{section.img}")
+									else
+										.img-wrapper
+											img(src="#{section.img}")
+							p #{section.name}
 			

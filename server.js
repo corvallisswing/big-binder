@@ -27,8 +27,25 @@ var render = function (res, title, sections) {
 		}
 	}
 
+	// Set up our viewmodel to have three items per row
+	var viewModel = [];
+	var rowSize = 3;
+	var columnIndex = 0;
+
+	sections.forEach(function (section, index) {
+		if (columnIndex % rowSize === 0) {
+			section.isFirstInRow = true;
+		}
+		viewModel.push(section);
+		columnIndex++;
+
+		if (section.type === "break") {
+			columnIndex = 0;
+		}
+	});
+
 	res.render('index', { 
-		sections: sections,
+		sections: viewModel,
 		title: title 
 	});
 };
@@ -103,6 +120,8 @@ app.get('/teachers/171', function (req, res) {
 	},{
 		name: "Week 1 v5",
 		href: "https://www.youtube.com/watch?v=faZ_LHYljSg"
+	},{
+		type: "break"
 	},{
 		name: "Week 2 v2",
 		href: "https://www.youtube.com/watch?v=Fvw2Gr2ZIvk"
@@ -193,6 +212,8 @@ app.get('/teachers/171', function (req, res) {
 	},{
 		name: "Week 9 v5",
 		href: "https://www.youtube.com/watch?v=s8kyEw2L3yA"
+	},{
+		type: "break"
 	},{
 		name: "Week 10 v3",
 		href: "https://www.youtube.com/watch?v=hG0GwkheZOE"
