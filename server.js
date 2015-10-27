@@ -251,6 +251,9 @@ app.get('/council', function (req, res) {
 		name: "How to: Swing society",
 		href: "http://corvallisswing.wikispaces.com/Basics"
 	},{
+		name: "How to: Grants",
+		href: "http://corvallisswing.wikispaces.com/Organizing+-+Grants"
+	},{
 		name: "Training: Books and things",
 		href: "/council/training"
 	}]);
